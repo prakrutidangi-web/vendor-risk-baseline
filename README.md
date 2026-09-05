@@ -125,6 +125,17 @@ To try it with no API key at all (offline, canned response, useful for grading w
 DRY_RUN=true python run_baseline.py --input examples/case_01_northwind_analytics
 ```
 
+## Notebook version
+
+`vendor_risk_baseline.ipynb` is the same baseline in notebook form, for reading through and
+re-running interactively rather than from the command line — it imports and calls the exact same
+`baseline.baseline.run_baseline_case()` function `run_baseline.py` does, so there's one source of
+truth for what "the baseline" does, not two implementations that could drift apart. It's already
+been executed (with `DRY_RUN=true`, so it needed no API key) and saved with its output cells
+intact, so it renders directly on GitHub with real output visible, including the real captured
+Groq run and its screenshot embedded inline. To run it yourself: `pip install jupyter` (in addition
+to `requirements.txt`), then `jupyter notebook vendor_risk_baseline.ipynb`.
+
 ## Input and output locations, and the test case
 
 **Input:** `examples/case_01_northwind_analytics/` — four plain-text documents describing one
@@ -197,6 +208,7 @@ https://console.groq.com/settings/limits, or wait for the free tier's daily rese
 
 ```
 run_baseline.py                    CLI entry point
+vendor_risk_baseline.ipynb         notebook version of the same baseline, pre-executed
 baseline/baseline.py               the single LLM call
 baseline/prompts.py                the exact prompt template
 baseline/llm.py                    Groq client: retries, rate limiting, fallback, dry-run mode
