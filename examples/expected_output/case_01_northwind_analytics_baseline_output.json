@@ -1,0 +1,9 @@
+{
+  "memo": "## Executive Summary\nNorthwind Analytics demonstrates solid financial health with quarterly revenue increasing from $485,243 in Q3-2025 to $533,867 in Q1-2026, a diversified customer base (largest client <20% of revenue), and a comfortable operating runway. Security controls such as encryption at rest, MFA, and a 24-hour breach notification commitment are in place, and a SOC 2 Type II report is available. The contract provides standard liability caps (3x fees) and a clear data-deletion timeline on termination. A recent reference call praises the vendor's security-conscious team.\n\n## Top Concerns\n- **No formal, documented incident response plan** - the vendor handles incidents ad-hoc, which increases risk of inconsistent handling and delayed remediation.\n- **Liability cap limited to 3x fees** - while typical, it may be insufficient for high-impact data breaches.\n\n## Recommendation\nApprove with conditions: require the vendor to deliver a written, tested incident response plan (including runbooks and escalation procedures) and consider negotiating a higher liability cap or additional indemnities for data-breach scenarios.",
+  "identified_issues": [
+    "no_formal_incident_response_plan",
+    "liability_cap_limit"
+  ],
+  "recommendation": "approve_with_conditions",
+  "case_id": "case_01_northwind_analytics"
+}
